@@ -6,6 +6,8 @@ Use-case: A customer would search the marketplace for an item and the model will
 
 ## Demo
 
+![demo](https://github.com/abuhasan12/Facebook-Marketplace-s-Recommendation-Ranking-System/blob/main/demo/Demo.gif)
+
 ## Docker
 
 To run:
