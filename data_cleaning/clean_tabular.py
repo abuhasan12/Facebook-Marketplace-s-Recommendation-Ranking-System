@@ -1,10 +1,8 @@
 import numpy as np
 import pandas as pd
 import re
-from spellchecker import SpellChecker
 import nltk
 from nltk.corpus import stopwords
-from sklearn.feature_extraction.text import TfidfVectorizer
 
 class CleanTabular():
     def __init__(self, path): 

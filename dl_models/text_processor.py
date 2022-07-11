@@ -8,7 +8,6 @@ from transformers import BertModel
 class TextProcessor:
     def __init__(self,
                  max_length: int = 100):
-
         self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
         self.model = BertModel.from_pretrained('bert-base-uncased', output_hidden_states = True)
         self.model.eval()

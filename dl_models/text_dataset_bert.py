@@ -13,10 +13,10 @@ class TextDatasetBert(Dataset):
     products['category'] = products['category'].str.split('/', expand=True)[labels_level]
     self.labels = products['category'].to_list()
     self.descriptions = products['product_description'].to_list()
-    self.classes = list(set(self.labels))
-    self.num_classes = len(set(self.labels))
-    self.encoder = {y: x for (x, y) in enumerate(set(self.labels))}
-    self.decoder = {x: y for (x, y) in enumerate(set(self.labels))}
+    self.classes = sorted(list(set(self.labels)))
+    self.num_classes = len(self.classes)
+    self.encoder = {y: x for x,y in enumerate(self.classes)}
+    self.decoder = {x: y for x,y in enumerate(self.classes)}
     self.tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
     self.model = BertModel.from_pretrained('bert-base-uncased', output_hidden_states = True)
     self.max_length = max_length

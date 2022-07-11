@@ -53,8 +53,6 @@ if __name__ == '__main__':
         transforms.Grayscale()
     ])
 
-    # transform = transforms.Grayscale()
-
     dataset = ProductsImDataset(transform=train_transform)
     train_loader = DataLoader(dataset, batch_size=8, shuffle=True)
     model = CNN()

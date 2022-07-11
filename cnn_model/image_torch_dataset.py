@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import torch
 from torch.utils.data import Dataset, DataLoader
-from torchvision import transforms
 
 class ProductsImDataset(Dataset):
     def __init__(self, transform = None):
